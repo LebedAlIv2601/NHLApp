@@ -1,0 +1,48 @@
+[versions]
+android = "8.1.4"
+kotlin = "1.9.21"
+core-ktx = "1.12.0"
+ksp = "1.9.21-1.0.16"
+lifecycle-runtime-ktx = "2.6.2"
+androidx-compose-compiler = "1.5.7"
+androidx-compose = "1.5.4"
+androidx-compose-materail3 = "1.1.2"
+androidx-activity-compose = "1.8.2"
+androidx-lifecycle = "2.7.0-rc02"
+androidx-desugar = "2.0.4"
+
+[libraries]
+# Androidx
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "core-ktx" }
+androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle-runtime-ktx" }
+androidx-desugar = { module = "com.android.tools:desugar_jdk_libs", version.ref = "androidx-desugar" }
+
+# Jetpack Compose
+androidx-compose-animation = { module = "androidx.compose.animation:animation", version.ref = "androidx-compose" }
+androidx-compose-ui = { module = "androidx.compose.ui:ui", version.ref = "androidx-compose" }
+androidx-compose-ui-graphics = { module = "androidx.compose.ui:ui-graphics", version.ref = "androidx-compose" }
+androidx-compose-ui-tools = { module = "androidx.compose.ui:ui-tooling", version.ref = "androidx-compose" }
+androidx-compose-ui-tools-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "androidx-compose" }
+androidx-compose-ui-utils = { module = "androidx.compose.ui:ui-util", version.ref = "androidx-compose" }
+androidx-compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "androidx-compose" }
+androidx-compose-runtime = { module = "androidx.compose.runtime:runtime", version.ref = "androidx-compose" }
+androidx-compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "androidx-compose-materail3" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity-compose" }
+
+# Lifecycle
+androidx_lifecycle_viewmodel_compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "androidx-lifecycle" }
+androidx_lifecycle_runtime_compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
+
+# Gradle
+android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "android" }
+kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "android" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+
+# buildPlugin plugins
+nhlapp-app = { id = "com.lebedaliv2601.buildplugin.plugins.appPlugin", version = "unspecified" }
+nhlapp-base = { id = "com.lebedaliv2601.buildplugin.plugins.basePlugin", version = "unspecified" }
